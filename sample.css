@@ -1,0 +1,37 @@
+body {margin:0;padding:0;}
+
+#slider {
+    position: relative;
+    width: 320px;
+}
+
+#slider a:focus {
+    outline: 0;
+}
+
+.slider-view {
+    position: relative;
+    border: 1px solid #bbb;
+    width: 320px; /* スライダーで表示するエリアの大きさ */
+    height: 360px;
+    overflow: hidden; /* 必須 */
+}
+
+.slider-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+	width: 2000px; /* 本来はコンテンツの横幅を取得して動的に設定すべきです */
+}
+
+/* スライドするコンテンツ部分 */
+.slider-container div {
+    position: relative; /* ループ処理に使う */
+    float: left;
+}
+
+/* チラツキ対策 */
+.slider-container {
+  -webkit-transform:translate3d(0,0,0);
+}
